@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | mirror networking test</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=480 height=854 style="width: 480px; height: 854px; background: #000000"></canvas>
+    <script src="Build/mirror networking test.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/mirror networking test.data.gz",
+        frameworkUrl: "Build/mirror networking test.framework.js.gz",
+        codeUrl: "Build/mirror networking test.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "mirror networking test",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
